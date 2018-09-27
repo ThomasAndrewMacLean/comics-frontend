@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import style from './style';
 import { gql } from 'apollo-boost';
 import { graphql } from 'react-apollo';
+import styled from 'styled-components';
 
 const getComicsQuery = gql`
   {
@@ -11,6 +12,11 @@ const getComicsQuery = gql`
       dbName
     }
   }
+`;
+
+const Link = styled.a`
+  text-decoration: none;
+  color: inherit;
 `;
 
 class OverviewComics extends Component {
@@ -26,7 +32,7 @@ class OverviewComics extends Component {
             {data.allSeries.sort((a, b) => a.title - b.title).map(serie => {
               return (
                 <h1>
-                  <a href={`/comic/${serie.id}`}>{serie.title}</a>
+                  <Link href={`/comic/${serie.id}`}>{serie.title}</Link>
                 </h1>
               );
             })}

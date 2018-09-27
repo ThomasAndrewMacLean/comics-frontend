@@ -4,7 +4,6 @@ import { Router } from 'preact-router';
 import Header from './header';
 
 // Code-splitting is automated for routes
-import Home from '../routes/home';
 import OverviewComics from '../routes/overviewComics';
 import Comic from '../routes/comic';
 
@@ -41,9 +40,7 @@ export default class App extends Component {
         <div id='app'>
           <Header />
           <Router onChange={this.handleRoute}>
-            <Home path='/' />
-            <OverviewComics path='/profile/' user='me' />
-            <OverviewComics path='/profile/:user' />
+            <OverviewComics path='/' />
             <Comic path='/comic' comicid='1' />
             <Comic path='/comic/:comicid' />
           </Router>

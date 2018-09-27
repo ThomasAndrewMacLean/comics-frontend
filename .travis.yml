@@ -1,16 +1,16 @@
 language: node
 node_js:
-- node
+  - node
 cache:
   yarn: true
   directories:
-  - node_modules
+    - node_modules
 install:
-- yarn install
-- yarn test
+  - yarn install
+  # - yarn test
 script:
-- yarn run build
-- ls build
+  - yarn run build
+  - ls build
 deploy:
   provider: s3
   access_key_id: AKIAJLPX77ICVZALUXEA
@@ -23,4 +23,4 @@ deploy:
   skip_cleanup: true
 branches:
   only:
-  - master
+    - master
