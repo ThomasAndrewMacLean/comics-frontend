@@ -5,7 +5,7 @@ import { graphql } from 'react-apollo';
 
 const getComicsQuery = gql`
   {
-    serie(id: 2) {
+    serie(id: 1) {
       title
       comics {
         title

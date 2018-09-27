@@ -12,6 +12,9 @@ const Header = () => (
       <Link activeClassName={style.active} href='/profile'>
         AllSeries
       </Link>
+      <Link activeClassName={style.active} href='/comic'>
+        Comic
+      </Link>
     </nav>
   </header>
 );

@@ -24,7 +24,11 @@ class OverviewComics extends Component {
         <div class={style.profile}>
           <ol>
             {data.allSeries.sort((a, b) => a.title - b.title).map(serie => {
-              return <h1>{serie.title}</h1>;
+              return (
+                <h1>
+                  <a href={`/comic/${serie.id}`}>{serie.title}</a>
+                </h1>
+              );
             })}
           </ol>
         </div>

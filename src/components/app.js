@@ -6,6 +6,7 @@ import Header from './header';
 // Code-splitting is automated for routes
 import Home from '../routes/home';
 import OverviewComics from '../routes/overviewComics';
+import Comic from '../routes/comic';
 
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
@@ -43,6 +44,8 @@ export default class App extends Component {
             <Home path='/' />
             <OverviewComics path='/profile/' user='me' />
             <OverviewComics path='/profile/:user' />
+            <Comic path='/comic' comicid='1' />
+            <Comic path='/comic/:comicid' />
           </Router>
         </div>
       </ApolloProvider>
