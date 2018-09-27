@@ -5,9 +5,11 @@ cache:
   yarn: true
   directories:
   - node_modules
-script:
+install:
 - yarn install
+before-script:
 - yarn test
+script:
 - yarn run build
 - ls build
 deploy:
