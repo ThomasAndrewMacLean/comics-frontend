@@ -1,12 +1,9 @@
 import { h, Component } from 'preact';
 import { Router } from 'preact-router';
-
 import Header from './header';
-
 // Code-splitting is automated for routes
 import OverviewComics from '../routes/overviewComics';
 import Comic from '../routes/comic';
-
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
