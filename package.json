@@ -9,7 +9,8 @@
     "serve": "preact build && preact serve",
     "dev": "preact watch",
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest",
+    "travis": "travis lint .travis.yml"
   },
   "eslintConfig": {
     "extends": "eslint-config-synacor"
