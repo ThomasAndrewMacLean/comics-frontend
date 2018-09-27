@@ -1,24 +1,23 @@
 language: node
-
 node_js:
-  - node
+- node
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
 script:
-  - yarn install
-  - yarn run build
-  - ls build
+- yarn install
+- yarn run build
+- ls build
 deploy:
   provider: s3
   access_key_id: AKIAJLPX77ICVZALUXEA
   secret_access_key:
-    secure: xI5TjT4H1oOUSX1O+YbB7xGB60lIGkeyjUKvAMOWCCrKBHy0DpK14tqKDM8q+OFnyc1rewlArT6JLEcmFsjiAHbhERcnWw+hyDD0asKide2mprKQtrb+9EEVJT3t+TjedDSb/wIvAJdXXP5cf57npbplaVp9dagocgtb/TVXwiW+UkLJYLYtIWQGuHUNXrB106dtU/UB1HMOXdV7mbGzWfua+7R8pPCh224X+TNbmxGyJ290Mb/GmH+Z+I3Zku4eyJr+QVR6Sxhg4mPXW5KGGXcHECGY8yckDqPjww7VO+5BVutvQ8G0llkhSUioMTp9FNHS+YFgpPawuXQK5WKSVWMolbfwc2+JoH7UQCf77lf1Ah2MQbFVxC1u6fNVj2tEpmg1LB48dMnDLyjI/2XfPNv9pcfC4+o7f3hlnuombDqI1kkoJGCFsUCHiZE/763i7ZPbKhSajWYs3sS3esFzkf6gj4MwSPblfg0wsQ6N5jgpP3DnPLBiKvAhcTSGf+SPEDXBUDx2Mykx9U7xF1BOs9GhImfLJMrst0g1UADUPe1SH4F2U6oC+1ybW1iSArNyt46RClXoPZN6tO1GYHQF1cGqGiBYCHZ54bxFef5HMdbcS2ufDYp1/FH74/Ur7qqFANswI1bDoI9PZvF4EkXrkARptnWtn9jYizioBjr/5L8=
+    secure: iGPF3gILjXRSI7IcP3GmMW7WOgsZsUPimR6vqBAnPvcg4fpiC//HdZ1qWISvZLEMYBxAUxPkZzhJc14SpAHOZg8uBr0i4Q7YXXSn78dYpb5wN8JUzEaRf0FsPPHc6RN42r5kwfZWqdn+CvE6fDfwOYvv+M3TZnvcOeRdNGpUTQMhjVrESO7HFZvevEKvoUi3mTF21srT9K1y+9OkUyDzRPErS7Ig36v0ekVcHQxiKce1tdIJTY9OizWO5PjMYacYILUmb0vJFhC1RsIV6HvtQOKSBZpfaqT/UOEK4oIHe0sKAuuVw3kpDmnTqUQqjafz8FvXyGHqkNOGzYYiDRv/GF3+fgLeH0U1+mTp6hoiCfSLcnNH/VYxVgzSYEHmAMm0YxwRITp7yx+uL95U68/pOdHde+l6iFWJvtqT13r/reuq+wVeOZRy2SDTgfj9HKVHhLU86RLbvzcfXZty20LulYRLg5x4Vy3lngo2qWN01xoBxI1UpfBH0Cl6xbEXkBfWKmUbLVx4R3mwHJV4nOypxUZfkn1dDGfARfuDWln8oee3Bzq/7oJv8ragx0nsiGD3p2iQXLOZXw1UzsL3Y4G1/grYLA7NRvzspxKOxp2Z0LlbTz9QtMcBND2EfQO82zq3uRGLQ5xdehJTB9yWzl/lefgNFt8HeTyFjaXpGh3Tzv4=
   bucket: comicstore
   acl: public_read
   skip_cleanup: true
   local_dir: build
 branches:
   only:
-    - master
+  - master
