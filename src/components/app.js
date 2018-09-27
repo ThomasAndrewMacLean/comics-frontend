@@ -10,12 +10,20 @@ import OverviewComics from '../routes/overviewComics';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
-const client = new ApolloClient({
-  uri:
-    window.location.hostname === 'localhost'
-      ? 'http://localhost:3000/graphql'
-      : 'https://comics-bqpuuardwx.now.sh'
-});
+let client;
+
+if (typeof window !== 'undefined') {
+  client = new ApolloClient({
+    uri:
+      window.location.hostname === 'localhost'
+        ? 'http://localhost:3000/graphql'
+        : 'https://comics-bqpuuardwx.now.sh'
+  });
+} else {
+  client = new ApolloClient({
+    uri: 'https://comics-bqpuuardwx.now.sh'
+  });
+}
 
 export default class App extends Component {
   /** Gets fired when the route changes.
