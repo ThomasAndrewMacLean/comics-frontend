@@ -1,5 +1,7 @@
 # comics-frontend
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ThomasAndrewMacLean/comics-frontend.svg)](https://greenkeeper.io/)
+
 ## CLI Commands
 
 ``` bash
