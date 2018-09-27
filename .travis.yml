@@ -17,8 +17,8 @@ deploy:
   bucket: comicstore
   local-dir: build
   acl: public_read
-  on:
-    repo: ThomasAndrewMacLean/comics-frontend
+  region: eu-west-1
+  skip_cleanup: true
 branches:
   only:
   - master
