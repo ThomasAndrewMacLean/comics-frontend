@@ -16,15 +16,12 @@ const GET_COMIC = gql`
 `;
 
 const Comic = ({ comicid }) => {
-  console.log(comicid);
-
   return (
     <div class={style.home}>
       <Query query={GET_COMIC} variables={{ comicid: parseInt(comicid) }}>
         {({ loading, error, data }) => {
           if (loading) return null;
           if (error) return `Error!: ${error}`;
-          console.log(data);
 
           return (
             <ol>
