@@ -17,11 +17,11 @@ if (typeof window !== 'undefined') {
     uri:
       window.location.hostname === 'localhost'
         ? 'http://localhost:3000/graphql'
-        : 'https://comics-bqpuuardwx.now.sh'
+        : 'https://comicgraphql.now.sh'
   });
 } else {
   client = new ApolloClient({
-    uri: 'https://comics-bqpuuardwx.now.sh'
+    uri: 'https://comicgraphql.now.sh'
   });
 }
 

@@ -3207,6 +3207,11 @@ eslint-config-standard-preact@^1.1.6:
     eslint-config-standard-jsx "^4.0.2"
     eslint-plugin-react "^7.1.0"
 
+eslint-config-standard@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-12.0.0.tgz#638b4c65db0bd5a41319f96bba1f15ddad2107d9"
+  integrity sha512-COUz8FnXhqFitYj4DTqHzidjIL/t4mumGZto5c7DrBpvWoie+Sn3P4sLEzUGeYhRElWuFEf8K1S1EfvD1vixCQ==
+
 eslint-config-synacor@^2.0.2:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-synacor/-/eslint-config-synacor-2.1.0.tgz#8ade304436b79a02ac2b8858b72cf3aefbc5c38c"
@@ -3228,6 +3233,11 @@ eslint-plugin-compat@^2.1.0:
     mdn-browser-compat-data "^0.0.40"
     requireindex "^1.2.0"
 
+eslint-plugin-jest@^21.22.1:
+  version "21.22.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.22.1.tgz#bc805e9b1c75c3bc92e47c44dd41370c1af7ebcc"
+  integrity sha512-OcVizyXljSps3nVfuPomfK8RKt7jvDsIsDrO7l1ZA4bDbiO9bEGWpsdU/x5F0pymVDG7ME88VlTboxbYJumLGQ==
+
 eslint-plugin-mocha@^4.0.0:
   version "4.12.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-mocha/-/eslint-plugin-mocha-4.12.1.tgz#dbacc543b178b4536ec5b19d7f8e8864d85404bf"
@@ -3235,7 +3245,12 @@ eslint-plugin-mocha@^4.0.0:
   dependencies:
     ramda "^0.25.0"
 
-eslint-plugin-react@^7.1.0, eslint-plugin-react@^7.5.1:
+eslint-plugin-promise@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.0.1.tgz#2d074b653f35a23d1ba89d8e976a985117d1c6a2"
+  integrity sha512-Si16O0+Hqz1gDHsys6RtFRrW7cCTB6P7p3OJmKp3Y3dxpQE2qwOA7d3xnV+0mBmrPoi0RBnxlCKvqu70te6wjg==
+
+eslint-plugin-react@^7.1.0, eslint-plugin-react@^7.11.1, eslint-plugin-react@^7.5.1:
   version "7.11.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.11.1.tgz#c01a7af6f17519457d6116aa94fc6d2ccad5443c"
   integrity sha512-cVVyMadRyW7qsIUh3FHp3u6QHNhOgVrLQYdQEB1bPWBsgbNCHdFAeNMquBMCcZJu59eNthX053L70l7gRt4SCw==
@@ -3245,6 +3260,11 @@ eslint-plugin-react@^7.1.0, eslint-plugin-react@^7.5.1:
     has "^1.0.3"
     jsx-ast-utils "^2.0.1"
     prop-types "^15.6.2"
+
+eslint-plugin-standard@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.0.tgz#f845b45109c99cd90e77796940a344546c8f6b5c"
+  integrity sha512-OwxJkR6TQiYMmt1EsNRMe5qG3GsbjlcOhbGUBY4LtavF9DsLaTcoR+j2Tdjqi23oUwKNUqX7qcn5fPStafMdlA==
 
 eslint-scope@3.7.1:
   version "3.7.1"

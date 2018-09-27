@@ -17,7 +17,6 @@ const getComicsQuery = gql`
 
 const Home = props => {
   const data = props.data;
-  console.log(data);
 
   if (data.loading) {
     return <div>loading...</div>;
