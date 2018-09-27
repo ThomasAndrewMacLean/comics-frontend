@@ -9,17 +9,16 @@ script:
 - yarn install
 - yarn run build
 - ls build
-before_deploy:
-  - rvm 1.9.3 do gem install aws-sdk -v 2.1.36
 deploy:
   provider: s3
-  access_key_id: "AKIAJ7W6BGR4M5AEWQIQ"
+  access_key_id: AKIAJLPX77ICVZALUXEA
   secret_access_key:
-    secure: "RnWXDB3qn65XPasHZyVi134hzQWncckbqZqI4kphanEMmOGa3tv+AB4b7W83yNUB89RGY5eYri+IKMBLiuAOYwANZQFdbFSd/98CLrqrBR3aS/io0d682ONdZDRP62hQoyF7ZdGSpG8YOBxlukwVK5KFhJk+qPs+TePhyz9fQPdHBJGdIsY4NkQHw4H1dS7ywqEXCB2SnznVWHHgMfKimmOKkM0eE417Es4KPK4IsXEI4916Et7iLHJpMonqOTXmFrAo1C9OAo4gA9Ry1j8xkuWJocBHUzacVPd02C4yEHKYLEVJBx+cmVjXfznQ8jRSEa3R99EOA/aVt1muTJvArnVYKpuhW/QlmaDVj4cWt6WFZgJVqpkRAks6AxtWK3ti8DjI64DlVcP4CJBvrkA0NWf/xl4kXEH642Bxv5miKVQgL16durbDvWZiPJVae/vYM4smwans9ba4iPeaXfaVAVSqtVm0/UlX+/Dkc7OkV+H9TSQ0iScmmjv49Uk78pf4OqENEPZZhlEHq70kl54tMa9Vs1cWb0qai89bD1/lRjybaCCbBadXTDprlRjx3B6VIDDkmhE8UFdtR/tPf7i1Bxoioj+kXFdTc3XyYp3oXZHQ9+ncG7aQ8xWyZzvO6BSKXbTyi2DicPaJvqJyOZwO43Fpa/YsauPc2nrkvPTWKtI="
-  region: "eu-west-1"
-  bucket: "comicstore"
-  skip_cleanup: true
-  local_dir: build
+    secure: LS44LXmdoPByNPmPtiLGn9rcTl9Z9Sd1ZpkxGa/CObB6DYTgJM5lL3itrIna4d5/jTlFNA79xg3mqgg3eOgeYJV+tu5sxoLifkcNyALPIdy2oNQNNnTCUNnS1Lh5WoqnjkrVRIez3HuGx60fI0Ydqpz38ySJG6YgK5kxpglTij5qJlbzcF8qkCHoXaWmz8ZmqEyhVetfUGu2sVov6lCmIEhNxZX9CS00wRderTFY19r3D3d7hFEjcc50ytci3R5HIH6FR9EBvloVZ7AaQNU2bv5xd52eqKMLAlvHelRn5bDL1VIICuDzUgRwUmr98e6GZRo44iVcp8ww1hdtqlWEuVgwU6c3jNUANYjeRWfRQ57np4jNSnHO49vTCMgYUgsNlUwq2tsGAIC9g2CEjT3hCvfYOUYV5YJmZvPDcxo/5T5sdDQRskUHN1w6cEoiaaqtgU+AYnE2Y4XUGGgX7MqFCq6LsCOEGIDYO6VjrNL+Nbq1JR3pVIDyRiZ7g7g+1HMlFPmxPe8pUCNRcdW7104dEJ2YAnt26c/C9T9gEbo2yw2zJ9xIjIXbraRYHlXuysV9sYddhcr6OPwet3LEbf46YjnZXGr3b0vYWxM3haKt+EKaV4R5RmbzQmUHS3Leldux+r1Fjg28uNKbVfZn9EKGcBtZQTc1H1fwz7cH2iOHd7I=
+  bucket: comicstore
+  local-dir: build
+  acl: public_read
+  on:
+    repo: ThomasAndrewMacLean/comics-frontend
 branches:
   only:
   - master
