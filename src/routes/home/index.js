@@ -1,11 +1,42 @@
 import { h } from 'preact';
 import style from './style';
+import { gql } from 'apollo-boost';
+import { graphql } from 'react-apollo';
 
-const Home = () => (
-	<div class={style.home}>
-		<h1>Home!!</h1>
-		<p>This is the Home component.</p>
-	</div>
-);
+const getComicsQuery = gql`
+  {
+    serie(id: 2) {
+      title
+      comics {
+        title
+        nr
+      }
+    }
+  }
+`;
 
-export default Home;
+const Home = props => {
+  const data = props.data;
+  console.log(data);
+
+  if (data.loading) {
+    return <div>loading...</div>;
+  } else {
+    return (
+      <div class={style.home}>
+        <h1>{data.serie.title}</h1>
+        <ol>
+          {data.serie.comics.sort((a, b) => a.nr - b.nr).map(comic => {
+            return (
+              <li key={comic.id}>
+                {comic.title} {comic.nr}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    );
+  }
+};
+
+export default graphql(getComicsQuery)(Home);
