@@ -9,6 +9,8 @@ script:
 - yarn install
 - yarn run build
 - ls build
+before_deploy:
+  - rvm 1.9.3 do gem install aws-sdk -v 2.1.36
 deploy:
   provider: s3
   access_key_id: "AKIAJ7W6BGR4M5AEWQIQ"
