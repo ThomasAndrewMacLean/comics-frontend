@@ -63,8 +63,6 @@ typings/
 node_modules
 /build
 /*.log
-*.lock
 
-package-lock.json
 
 σecret.txt
