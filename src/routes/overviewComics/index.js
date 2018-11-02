@@ -19,12 +19,23 @@ const Link = styled.a`
   color: inherit;
 `;
 
+const CenteredDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
 class OverviewComics extends Component {
   render() {
     const data = this.props.data;
 
     if (data.loading) {
-      return <div>loading...</div>;
+      return (
+        <CenteredDiv class={style.loading}>
+          loading... <p class={style.loader} />
+        </CenteredDiv>
+      );
     } else {
       return (
         <div class={style.profile}>
