@@ -6,10 +6,10 @@ cache:
   directories:
     - node_modules
 install:
-  - yarn install
+  - npm install
   # - yarn test
 script:
-  - yarn run build
+  - npm run build
   - ls build
 deploy:
   provider: s3
