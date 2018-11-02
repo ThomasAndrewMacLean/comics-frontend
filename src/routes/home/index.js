@@ -10,6 +10,7 @@ const getComicsQuery = gql`
       comics {
         title
         nr
+        owned
       }
     }
   }
@@ -28,7 +29,7 @@ const Home = props => {
           {data.serie.comics.sort((a, b) => a.nr - b.nr).map(comic => {
             return (
               <li key={comic.id}>
-                {comic.title} {comic.nr}
+                {comic.title} {comic.nr} - ({comic.owned})
               </li>
             );
           })}

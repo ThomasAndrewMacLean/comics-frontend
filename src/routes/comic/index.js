@@ -2,15 +2,19 @@ import { h, Component } from 'preact';
 import style from './style';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
+import ComicListItem from './../../components/ComicListItem';
 import styled from 'styled-components';
 
 const GET_COMIC = gql`
   query Comic($comicid: Int!) {
     serie(id: $comicid) {
       title
+      dbName
       comics {
         nr
         title
+        owned
+        _id
       }
     }
   }
@@ -23,12 +27,6 @@ const Input = styled.input`
   font-size: 1.5rem;
   color: #333;
   padding-left: 10px;
-`;
-
-const ComicDiv = styled.div`
-  margin-top: 1.1rem;
-  //outline: 1px solid green;
-  padding: 1rem;
 `;
 
 const ComicList = styled.div`
@@ -72,9 +70,11 @@ class Comic extends Component {
                   .sort((a, b) => a.nr - b.nr)
                   .map(comic => {
                     return (
-                      <ComicDiv key={comic.nr}>
-                        {comic.nr} {comic.title}
-                      </ComicDiv>
+                      <ComicListItem
+                        comic={comic}
+                        serie={data.serie}
+                        key={comic.nr}
+                      />
                     );
                   })}
               </ComicList>
