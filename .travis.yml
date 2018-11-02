@@ -1,7 +1,6 @@
 language: node
 node_js:
-  - node
-  - 8
+  - "7"
 cache:
   npm: true
   directories:
