@@ -32,7 +32,7 @@ class OverviewComics extends Component {
 
     if (data.loading) {
       return (
-        <CenteredDiv class={style.loading}>
+        <CenteredDiv>
           loading... <p class={style.loader} />
         </CenteredDiv>
       );

@@ -20,6 +20,13 @@ const GET_COMIC = gql`
   }
 `;
 
+const CenteredDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
 const Input = styled.input`
   margin-top: 1rem;
   width: 100%;
@@ -56,8 +63,16 @@ class Comic extends Component {
         <Input type='text' onChange={this.handleSearch} value={search} />
         <Query query={GET_COMIC} variables={{ comicid: parseInt(comicid) }}>
           {({ loading, error, data }) => {
-            if (loading) return null;
-            if (error) return `Error!: ${error}`;
+            if (loading) {
+              return (
+                <CenteredDiv>
+                  loading... <p class={style.loader} />
+                </CenteredDiv>
+              );
+            }
+            if (error) {
+              return <CenteredDiv>Error!: {error}</CenteredDiv>;
+            }
 
             return (
               <ComicList>
