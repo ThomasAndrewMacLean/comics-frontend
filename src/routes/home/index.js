@@ -20,7 +20,7 @@ const Home = props => {
   const data = props.data;
 
   if (data.loading) {
-    return <div>loading...</div>;
+    return <div class={style.home}>loading...</div>;
   } else {
     return (
       <div class={style.home}>
